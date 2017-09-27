@@ -44,6 +44,10 @@ module.exports = {
     ],
     loaders: [
       {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
         test: /\.vue$/,
         loader: 'vue'
       },
@@ -96,13 +100,13 @@ module.exports = {
       })
     ]
   },
-  stylus: {
-    use: [
-      require('jeet')(),
-      require('rupture')()
-    ],
-    import: [
-      path.resolve(__dirname, '../src/styles/index.styl')
-    ]
-  }
+  // stylus: {
+  //   use: [
+  //     require('jeet')(),
+  //     require('rupture')()
+  //   ],
+  //   import: [
+  //     path.resolve(__dirname, '../src/styles/index.styl')
+  //   ]
+  // }
 }

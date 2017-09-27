@@ -25,7 +25,6 @@ export default {
 }
 </script>
 
-<style lang="sass">
-/*@import "styles/theme"*/
-
+<style lang="scss">
+  @import "styles/index";
 </style>
