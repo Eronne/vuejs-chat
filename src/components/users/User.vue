@@ -1,9 +1,10 @@
 <template>
-  <li>Username</li>
+  <li>{{ data }}</li>
 </template>
 
 <script>
   export default {
-    name: 'user'
+    name: 'user',
+    props: ['data']
   }
 </script>

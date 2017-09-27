@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <user v-for="user in users"></user>
+    <user v-for="user in users" :data="user"></user>
     <!-- Users -->
   </ul>
 </template>

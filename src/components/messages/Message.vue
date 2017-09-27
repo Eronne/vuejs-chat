@@ -1,9 +1,12 @@
 <template>
-  <h1>Hello</h1>
+  <article>
+    {{ data }}
+  </article>
 </template>
 
 <script>
   export default {
-    name: 'message'
+    name: 'message',
+    props: ['data']
   }
 </script>
