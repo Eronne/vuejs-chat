@@ -1,13 +1,13 @@
-import WelcomeComponent from 'components/Welcome'
-import HelloComponent from 'components/Hello'
+import ChatComponent from 'components/views/Chat'
+import LoginComponent from 'components/views/Login'
 
 export default [
   {
     path: '/',
-    component: WelcomeComponent
+    component: ChatComponent
   },
   {
-    path: '/hello/:name',
-    component: HelloComponent
+    path: '/login',
+    component: LoginComponent
   }
 ]
