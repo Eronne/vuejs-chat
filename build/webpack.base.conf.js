@@ -27,6 +27,7 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  devtool: "source-map",
   module: {
     preLoaders: [
       {
@@ -45,7 +46,17 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader", options: {
+            sourceMap: true
+          }
+        }, {
+          loader: "sass-loader", options: {
+            sourceMap: true
+          }
+        }]
       },
       {
         test: /\.vue$/,
