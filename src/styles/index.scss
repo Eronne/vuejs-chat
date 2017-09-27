@@ -1,6 +1,12 @@
 // Imports
+//@import "~jeet";
+//@import "~rupture";
+
+@import "theme/variables";
+@import "theme/mixins";
 
 body{
-  background: black url("assets/img/background.jpg") no-repeat fixed center center;
+  margin: 0;
+  background: black url("assets/img/views/background.jpg") no-repeat fixed center center;
   background-size: cover;
 }
