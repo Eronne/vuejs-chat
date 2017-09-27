@@ -1,0 +1,20 @@
+<template>
+  <ul>
+    <user v-for="user in users"></user>
+    <!-- Users -->
+  </ul>
+</template>
+
+<script>
+  import User from './User.vue'
+
+  export default {
+    components: {User},
+    name: 'userList',
+    data () {
+      return {
+        users: ['Erwann', 'Alexandre', 'Omar']
+      }
+    }
+  }
+</script>

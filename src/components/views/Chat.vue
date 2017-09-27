@@ -1,7 +1,22 @@
 <template>
   <main>
-    <h1>Chat</h1>
-    <p>Chat will be there</p>
-    <router-link to="login">Login Page</router-link>
+    <user-list></user-list>
+    <message-list></message-list>
+    <message-form></message-form>
   </main>
 </template>
+
+<script>
+  import UserList from '../users/UserList'
+  import MessageList from '../messages/MessageList'
+  import MessageForm from '../messages/MessageForm'
+
+  export default {
+    name: 'chat',
+    components: {
+      UserList,
+      MessageList,
+      MessageForm
+    }
+  }
+</script>
