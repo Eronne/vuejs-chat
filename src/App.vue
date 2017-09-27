@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :store="store" @ login="onLogin"></router-view>
+    <router-view :store="store" @login="onLogin"></router-view>
   </div>
 </template>
 
