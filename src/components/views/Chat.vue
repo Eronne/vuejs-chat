@@ -1,7 +1,7 @@
 <template>
   <main>
-    <user-list></user-list>
-    <message-list></message-list>
+    <user-list :users="store.users"></user-list>
+    <message-list :messages="store.messages"></message-list>
     <message-form></message-form>
   </main>
 </template>
@@ -13,6 +13,7 @@
 
   export default {
     name: 'chat',
+    props: ['store'],
     components: {
       UserList,
       MessageList,

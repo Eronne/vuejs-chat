@@ -9,14 +9,8 @@
   import Message from './Message.vue'
 
   export default {
+    components: {Message},
     name: 'messageList',
-    data () {
-      return {
-        messages: ['Bonjour', 'Hello']
-      }
-    },
-    components: {
-      Message
-    }
+    props: ['messages']
   }
 </script>

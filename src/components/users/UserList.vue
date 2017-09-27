@@ -11,10 +11,6 @@
   export default {
     components: {User},
     name: 'userList',
-    data () {
-      return {
-        users: ['Erwann', 'Alexandre', 'Omar']
-      }
-    }
+    props: ['users']
   }
 </script>
