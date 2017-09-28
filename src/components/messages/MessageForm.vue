@@ -6,8 +6,6 @@
 </template>
 
 <script>
-  import Message from 'src/models/Message'
-
   export default {
     name: 'messageForm',
     data () {
@@ -17,9 +15,8 @@
     },
     methods: {
       onSubmit (e) {
-        this.sendMessage(new Message(this.message, this.$store.user))
+        this.sendMessage(this.message)
         if (this.message.length > 0) {
-          e.target.querySelector('input').value = ''
           this.message = ''
         }
       }

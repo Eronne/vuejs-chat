@@ -4,8 +4,8 @@ import Vue from 'vue'
 export const store = new Vue({
   data: {
     user: {}, // User informations
-    users: ['Erwann', 'Alexandre', 'Omar'], // User List
-    messages: ['Bonjour', 'Hello'] // Message List
+    users: [], // User List
+    messages: [] // Message List
   }
 })
 
@@ -20,16 +20,19 @@ export default {
       console.log('connect')
     })
 
-    socket.on('new message', (data) => {
-      // data = {
-      //   author:
-      //   body:
-      // }
+    socket.on('new message', (message) => {
+      store.messages.push(message)
     })
 
     socket.on('user connected', (user) => {
-      console.log(user)
       store.user = user
+    })
+
+    socket.on('getUsers', (users) => {
+      console.log(users)
+      for (let i = 0; i < users.length; i++) {
+        store.users.push(users[i].username)
+      }
     })
 
     Vue.mixin({
@@ -40,8 +43,8 @@ export default {
             avatarURL
           })
         },
-        sendMessage (text) {
-          socket.emit('new message', text)
+        sendMessage (message) {
+          socket.emit('new message', message)
         }
 
       // SendWizz…
