@@ -1,12 +1,11 @@
 <template>
   <div id="app">
+      <div class="space"></div>
       <router-view :store="$store" @login="onLogin"></router-view>
   </div>
 </template>
 
 <script>
-// import './js/stars'
-
 export default {
   methods: {
     onLogin (username) {
@@ -21,4 +20,5 @@ export default {
 
 <style lang="scss">
   @import "styles/index";
+  @import "styles/components/background";
 </style>
