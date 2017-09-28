@@ -3,16 +3,16 @@
     <div class="container">
       <div class="user-list">
         <!-- TODO: Put condition for -s -->
-        <h1 v-if="this.store.users.length >= 1">{{ this.store.users.length }} Astronautes en ligne</h1>
-        <h1 v-else>{{ this.store.users.length }} Astronaute en ligne</h1>
-        <user-list class="list" :users="store.users"></user-list>
+        <h1 v-if="$store.users.length >= 1">{{ $store.users.length }} Astronautes en ligne</h1>
+        <h1 v-else>{{ $store.users.length }} Astronaute en ligne</h1>
+        <user-list class="list" :users="$store.users"></user-list>
       </div>
 
       <div class="messages">
-        <h1>Hello {{ this.store.user.name }}</h1>
+        <h1>Hello {{ $store.user.username }}</h1>
 
         <div class="message-list">
-          <message-list :messages="store.messages"></message-list>
+          <message-list :messages="$store.messages"></message-list>
         </div>
         <message-form class="message-form"></message-form>
       </div>

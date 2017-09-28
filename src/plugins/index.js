@@ -24,15 +24,22 @@ export default {
       store.messages.push(message)
     })
 
+    socket.on('getUsers', (users) => {
+      for (let i = 0; i < users.length; i++) {
+        store.users.push(users[i])
+      }
+    })
+
     socket.on('user connected', (user) => {
       store.user = user
     })
 
-    socket.on('getUsers', (users) => {
-      console.log(users)
-      for (let i = 0; i < users.length; i++) {
-        store.users.push(users[i].username)
-      }
+    socket.on('user joined', (user) => {
+      store.users = user.clients
+    })
+
+    socket.on('user left', (userId) => {
+      store.users = store.users.filter(user => user.id !== userId)
     })
 
     Vue.mixin({

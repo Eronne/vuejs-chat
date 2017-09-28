@@ -1,5 +1,5 @@
 <template>
-  <li>{{ data }}</li>
+  <li>{{ data.username }}</li>
 </template>
 
 <script>
