@@ -3,12 +3,17 @@
     <div class="container">
       <div class="user-list">
         <!-- TODO: Put condition for -s -->
-        <h1>Astronaute en ligne</h1>
+        <h1 v-if="this.store.users.length >= 1">{{ this.store.users.length }} Astronautes en ligne</h1>
+        <h1 v-else>{{ this.store.users.length }} Astronaute en ligne</h1>
         <user-list class="list" :users="store.users"></user-list>
       </div>
 
       <div class="messages">
-        <message-list class="message-list" :messages="store.messages"></message-list>
+        <h1>Hello {{ this.store.user.name }}</h1>
+
+        <div class="message-list">
+          <message-list :messages="store.messages"></message-list>
+        </div>
         <message-form class="message-form"></message-form>
       </div>
     </div>
@@ -32,41 +37,43 @@
   }
 </script>
 
-<style lang="scss" scoped="">
+<style lang="scss" scoped>
   .container {
     display: flex;
-  }
 
-  .user-list {
-    width: 10vw;
-    height: 100vh;
-    background-color: #bbbbbb;
+    .user-list {
+      width: 10vw;
+      height: 100vh;
+      background-color: #bbbbbb;
 
-    .list {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
+      .list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
     }
-  }
 
-  .messages {
-    position: relative;
-
-    .message-list {
+    .messages {
       margin: 0;
       width: 90vw;
       height: 100vh;
-      background-color: #41b883;
-    }
-
-    .message-form {
-      box-sizing: border-box;
-      position: absolute;
-      bottom: 0;
+      position: fixed;
       right: 0;
-      width: 90vw;
-      padding: 20px;
-      background-color: cadetblue;
+      background-color: #41b883;
+
+      .message-list {
+        background-color: red;
+      }
+
+      .message-form {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 90vw;
+        padding: 20px;
+        background-color: cadetblue;
+      }
     }
   }
 </style>

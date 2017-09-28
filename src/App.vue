@@ -21,6 +21,11 @@ export default {
         name: username
       }
     }
+  },
+  created: function () {
+    if (!this.store.user.name) {
+      this.$router.push('/login')
+    }
   }
 }
 </script>

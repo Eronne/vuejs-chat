@@ -7,7 +7,7 @@
 
       <form @submit.prevent="onSubmit">
         <input type="text" placeholder="Username" v-model="username">
-        <button>Connexion</button>
+        <button>Décoller</button>
       </form>
     </div>
   </main>
@@ -29,6 +29,7 @@
           this.error = true
         } else {
           this.$emit('login', this.username)
+          this.$router.push('/')
         }
       }
     }
