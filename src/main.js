@@ -3,12 +3,21 @@
 import Vue from 'vue'
 import Bourgeon from 'bourgeon'
 import App from './App'
+import plugins from './plugins/index'
 
 Vue.use(Bourgeon, {
   locales: ['fr', 'en']
 })
 
+Vue.use(plugins, {
+  api: 'https://bddi-chat2017.herokuapp.com/'
+})
+
+export const bus = new Vue()
+
 /* eslint-disable no-new */
 new Vue({
-  render: h => h(App)
-}).$mount('#app')
+  el: '#app',
+  template: '<App/>',
+  components: {App}
+})
