@@ -6,7 +6,8 @@
 </template>
 
 <script>
-  import {bus} from '../../main'
+  import Message from 'src/models/Message'
+
   export default {
     name: 'messageForm',
     data () {
@@ -16,10 +17,11 @@
     },
     methods: {
       onSubmit (e) {
-        this.sendMessage(this.message)
-        bus.$emit('newMessage', this.message)
-        e.target.querySelector('input').value = ''
-        this.message = ''
+        this.sendMessage(new Message(this.message, this.$store.user))
+        if (this.message.length > 0) {
+          e.target.querySelector('input').value = ''
+          this.message = ''
+        }
       }
     }
   }

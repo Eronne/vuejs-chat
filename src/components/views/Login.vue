@@ -9,6 +9,10 @@
         <input type="text" placeholder="Username" v-model="username">
         <button>Décoller</button>
       </form>
+
+      <div class="avatars">
+        <!--<p>Choisis ton avatar !</p>-->
+      </div>
     </div>
   </main>
 </template>
@@ -32,6 +36,13 @@
           this.$router.push('/')
         }
       }
+    },
+    created () {
+      this.store.$watch('user', (user) => {
+        if (user.id) {
+          this.$router.push('/')
+        }
+      })
     }
   }
 </script>

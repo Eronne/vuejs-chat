@@ -42,7 +42,7 @@
     display: flex;
 
     .user-list {
-      width: 10vw;
+      width: 20vw;
       height: 100vh;
       background-color: #bbbbbb;
 
@@ -55,10 +55,9 @@
 
     .messages {
       margin: 0;
-      width: 90vw;
+      width: 80vw;
       height: 100vh;
-      position: fixed;
-      right: 0;
+      position: relative;
       background-color: #41b883;
 
       .message-list {
@@ -70,7 +69,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 90vw;
+        width: 80vw;
         padding: 20px;
         background-color: cadetblue;
       }

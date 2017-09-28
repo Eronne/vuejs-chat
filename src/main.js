@@ -13,8 +13,6 @@ Vue.use(plugins, {
   api: 'https://bddi-chat2017.herokuapp.com/'
 })
 
-export const bus = new Vue()
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
