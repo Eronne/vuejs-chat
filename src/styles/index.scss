@@ -3,11 +3,14 @@
 //@import "~rupture";
 @import "~animate.css";
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 @import "theme/variables";
 @import "theme/mixins";
 
 body{
   margin: 0;
+  font-family: Roboto, sans-serif;
   background: black url("assets/img/views/background.jpg") no-repeat fixed center center;
   background-size: cover;
 }

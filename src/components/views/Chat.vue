@@ -2,7 +2,8 @@
   <main>
     <div class="container">
       <div class="user-list">
-        <h1>User List</h1>
+        <!-- TODO: Put condition for -s -->
+        <h1>Astronaute en ligne</h1>
         <user-list class="list" :users="store.users"></user-list>
       </div>
 

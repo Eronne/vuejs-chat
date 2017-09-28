@@ -2,7 +2,7 @@
   <main>
     <div class="container animated zoomIn">
       <img src="../../assets/img/login/logo.png" alt="Logo" class="logo">
-      <h1 v-if="store.user">{{ store.user.name }}</h1>
+      <p v-if="store.user">{{ store.user.name }}</p>
       <p @class="error" v-if="error">Username should be between 1 and 15 characters</p>
 
       <form @submit.prevent="onSubmit">
