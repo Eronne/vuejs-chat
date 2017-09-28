@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <div class="container animated zoomIn">
       <img src="../../assets/img/login/logo.png" alt="Logo" class="logo">
       <h1 v-if="store.user">{{ store.user.name }}</h1>
       <p @class="error" v-if="error">Username should be between 1 and 15 characters</p>
@@ -74,18 +74,21 @@
         }
 
         input {
+          width: 15vw;
           text-align: center;
           padding: 8px;
-          margin-bottom: 30px;
+          margin-bottom: 6vh;
           color: #ffffff;
           border: none;
           border-bottom: 1px solid white;
           background-color: transparent;
+          box-sizing: border-box;
         }
 
         button {
+          width: 15vw;
           margin: 0 auto;
-          padding: 10px;
+          padding: 15px;
           color: #ffffff;
           background-color: transparent;
           border: 1px solid white;
