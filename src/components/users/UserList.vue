@@ -1,7 +1,6 @@
 <template>
   <ul>
     <user v-for="user in users" :data="user"></user>
-    <!-- Users -->
   </ul>
 </template>
 
@@ -14,3 +13,9 @@
     props: ['users']
   }
 </script>
+
+<style lang="scss">
+  ul {
+    display: flex;
+  }
+</style>

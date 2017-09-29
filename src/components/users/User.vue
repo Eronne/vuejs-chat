@@ -1,5 +1,5 @@
 <template>
-  <li>{{ data.username }}</li>
+  <li class="animated fadeIn">{{ data.username }}</li>
 </template>
 
 <script>
@@ -8,3 +8,10 @@
     props: ['data']
   }
 </script>
+
+<style lang="scss">
+  li {
+    display: inline-block;
+    transform: rotate(-50deg);
+  }
+</style>

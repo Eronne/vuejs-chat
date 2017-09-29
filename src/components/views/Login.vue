@@ -2,7 +2,6 @@
   <main>
     <div class="container animated zoomIn">
       <img src="../../assets/img/login/logo.png" alt="Logo" class="logo">
-      <p v-if="$store.user">{{ $store.user.username }}</p>
       <p @class="error" v-if="error">Username should be between 1 and 15 characters</p>
 
       <form @submit.prevent="onSubmit">
@@ -47,7 +46,9 @@
   }
 </script>
 
-<style lang="scss" scoped="">
+<style lang="scss" scoped>
+  @import "../../styles/theme/variables";
+
   main {
     display: flex;
     justify-content: center;
@@ -61,7 +62,7 @@
       align-items: center;
       width: 30%;
       height: 55%;
-      border: 1px solid white;
+      border: 1px solid $principal;
       border-radius: 3px;
 
       @media (max-width: 980px) {
@@ -90,9 +91,9 @@
           text-align: center;
           padding: 8px;
           margin-bottom: 6vh;
-          color: #ffffff;
+          color: $principal;
           border: none;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid $principal;
           background-color: transparent;
           box-sizing: border-box;
         }
@@ -101,7 +102,7 @@
           width: 15vw;
           margin: 0 auto;
           padding: 15px;
-          color: #ffffff;
+          color: $principal;
           background-color: transparent;
           border: 1px solid white;
           border-radius: 3px;

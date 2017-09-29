@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="message-list">
     <message v-for="message in messages" :data="message"></message>
     <!-- Messages -->
   </div>

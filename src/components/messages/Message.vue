@@ -1,9 +1,6 @@
 <template>
-  <article v-bind:class="[classUser ? 'current-user': 'other-user']">
-    <p>User : {{data.author.username}}</p>
-    <p>Time : {{data.createdAt}}</p>
-    <p>Content : {{ data.body }}</p>
-    <hr>
+  <article v-bind:class="[classUser ? 'current-user': 'other-user']" class="message animated fadeIn">
+    <p>User : {{data.author.username}} | Time : {{data.createdAt}} | Content : {{ data.body }}</p>
   </article>
 </template>
 
@@ -30,3 +27,6 @@
     }
   }
 </script>
+
+<style lang="scss">
+</style>

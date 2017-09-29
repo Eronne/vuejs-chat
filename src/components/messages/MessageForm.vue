@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <input type="text" placeholder="Message" v-model="message">
-    <button>Envoyer</button>
+    <input type="text" placeholder="Message" v-model="message"><!-- White space bug
+    --><button>></button>
   </form>
 </template>
 
