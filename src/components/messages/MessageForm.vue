@@ -15,8 +15,8 @@
     },
     methods: {
       onSubmit (e) {
-        this.sendMessage(this.message)
         if (this.message.length > 0) {
+          this.sendMessage(this.message)
           this.message = ''
         }
       }

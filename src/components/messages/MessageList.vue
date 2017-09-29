@@ -14,3 +14,9 @@
     props: ['messages']
   }
 </script>
+
+<style lang="scss">
+  .message-list {
+    box-sizing: border-box;
+  }
+</style>

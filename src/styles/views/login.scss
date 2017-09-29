@@ -1,0 +1,61 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 55%;
+    border: 1px solid $principal;
+    border-radius: 3px;
+
+    @media (max-width: 980px) {
+      width: 60%;
+    }
+
+    .logo {
+      position: absolute;
+      top: -56px;
+    }
+
+    form{
+      display: block !important;
+
+      ::placeholder{
+        color: #cacaca;
+      }
+
+      input, button {
+        display: block;
+        font-size: 1.4em;
+      }
+
+      input {
+        width: 15vw;
+        text-align: center;
+        padding: 8px;
+        margin-bottom: 6vh;
+        color: $principal;
+        border: none;
+        border-bottom: 1px solid $principal;
+        background-color: transparent;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 15vw;
+        margin: 0 auto;
+        padding: 15px;
+        color: $principal;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 3px;
+      }
+    }
+  }
+}
